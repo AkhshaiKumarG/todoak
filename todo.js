@@ -10,25 +10,6 @@ let doItBtn = document.getElementById("doItBtn");
 let backBtn = document.getElementById("backBtn");
 let onAddTodo = document.getElementById("onAddTodo");
 
-// let todoList = [
-// {
-//     text: "To become a Millionaire",
-//     uniqueNo: 1
-// },
-// {
-//     text: "To buy a top-end BMW car",
-//     uniqueNo: 2
-// },
-// {
-//     text: "To buy a latest iPhone",
-//     uniqueNo: 3
-// },
-// {
-//     text: "To help poor people",
-//     uniqueNo: 4
-// }
-// ];
-
 // function to get todos from local storage
 function getTodoFromStorage() {
     let stringified = localStorage.getItem("todoList");
@@ -75,8 +56,7 @@ function onAdding() {
 function statusChange(checkbox, lable, todoId) {
     let checkboxEl = document.getElementById(checkbox);
     let label = document.getElementById(lable);
-    // label.classList.toggle("checked");
-    // labelContainer.classList.toggle("checked-color")
+    
 
     // to get the todo from local storage with checked status
     let todoStatusIndex = todoList.findIndex(function(eachTodo) {
@@ -86,17 +66,13 @@ function statusChange(checkbox, lable, todoId) {
         } else {
             return false;
         }
-        //  return eachTodoStatus === todoId;
     })
     let status = todoList[todoStatusIndex];
 
     if (status.isChecked === true) {
-
-        // labelContainer.classList.toggle("checked-color")
         status.isChecked = false;
     } else {
         status.isChecked = true;
-        // labelContainer.classList.remove("checked-color")
     }
 
     // to get the todo from local storage with filled color status
@@ -128,22 +104,6 @@ function createAppend(todo) {
     list.id = todoId;
     todoContainer.appendChild(list);
 
-    // let inputCheckbox = document.createElement("input");
-    // inputCheckbox.type = "checkbox";
-    // inputCheckbox.id = checkbox;
-    // inputCheckbox.checked = todo.isChecked;
-    // inputCheckbox.classList.add("checkbox-style");
-
-    // // function to checked status and color transitions
-    // inputCheckbox.onclick = function() {
-    //     statusChange(checkbox, lable, todoId);
-    //     labelContainer.classList.toggle("checked-color")
-    //     label.classList.toggle("black")
-    //     completedWord.classList.toggle("completed-word-transition");
-    //     completedWord.classList.toggle("completed-white");
-    // }
-    // list.appendChild(inputCheckbox);
-
 
     // to align the completed and delete in row wise
     let labelContainer = document.createElement("div");
@@ -174,7 +134,6 @@ function createAppend(todo) {
     // function for completed word
     completedWord.onclick = function() {
         statusChange(checkbox, lable, todoId);
-        // inputCheckbox.checked = todo.isChecked;
 
         labelContainer.classList.toggle("checked-color")
         label.classList.toggle("black")
@@ -194,21 +153,17 @@ function createAppend(todo) {
 
 
     if (todo.isChecked === true) {
-
-        // label.classList.add("checked");
         labelContainer.classList.add("checked-color");
         label.classList.add("black")
         completedWord.classList.add("completed-word-transition");
         completedWord.classList.add("completed-white");
     }
     if (todo.isFilled === true) {
-        // label.classList.add("checked");
         labelContainer.classList.add("checked-color");
         label.classList.add("black")
         completedWord.classList.add("completed-word-transition");
         completedWord.classList.add("completed-white");
     }
-    // labelContainer.appendChild(label);
 
 
     // function to change the style of todo by hovering mouse on the completed word
@@ -245,8 +200,6 @@ function createAppend(todo) {
     // function to delete the todo
     let deleting = document.getElementById("deleting");
     deleteWord.onclick = function() {
-        // let checkOk = 
-        // alert("Are you sure ?")
         if (confirm("Are you sure ?")) {
             onDelete(todoId);
         } else {
@@ -254,17 +207,7 @@ function createAppend(todo) {
         }
 
     };
-
-    // setTimeout(() => {
-    //     labelContainer.classList.remove("mousing1");
-    //     deleteWord.classList.remove("delete-word-transition1");
-    //     label.classList.remove("black-label");
-    // }, 10);
-
 }
-
-
-
 
 
 

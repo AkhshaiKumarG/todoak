@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- first line is for confetti animation -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <div>
+        <div id="sectionHomePage">
+            <div class="d-md-none">
+                <div class="bgroundSm d-flex flex-column justify-content-end">
+                    <div class="btns-center mb-5">
+                        <button class="btn-styles" id="doItBtn">
+                            <span class="btn-styles-span"> Let's do it...
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></button>
+                            </span>
+                          </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-none d-md-block d-lg-none">
+                <div class="bgroundMd d-flex flex-column justify-content-end">
+                    <div class="btns-center-md">
+                        <button class="btn-styles-md" id="doItBtn" onclick="display('sectionTodoPage')"><span class="btn-styles-span-md">Let's do it...
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                            <span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="bgroundLg d-flex flex-column justify-content-end">
+                    <div class="btns-center-lg">
+                        <button class="btn-styles-lg" id="doItBtn" onclick="display('sectionTodoPage')"><span class="btn-styles-span-lg">Let's do it...
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="spinner">
+                <div class="d-none sizes d-flex flex-column justify-content-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="sectionTodoPage">
+            <div id="confettiAnimationContainer"></div>
+            <div id="bgroundContainer" class="bground">
+
+                <h1 class="heading">Your ToDo's List</h1>
+                <input type="text" class="text-area" id="userInput" placeholder="Add your new todo...">
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- <button class="btn btn-primary mt-3 mb-3 m-1 btns-styles" id="onAddTodo">Add</button> -->
+                    <button id="onAddTodo" class="newBtn m-3">
+                        <span>Add</span>
+                        <div class="top"></div>
+                        <div class="left"></div>
+                        <div class="bottom"></div>
+                        <div class="right"></div>
+                    </button>
+                    <!-- <button class="btn btn-primary mt-3 mb-3 m-1 btns-styles" id="onSaving">Save</button> -->
+                    <button id="onSaving" class="newBtn m-3">
+                        <span>Save</span>
+                        <div class="top"></div>
+                        <div class="left"></div>
+                        <div class="bottom"></div>
+                        <div class="right"></div>
+                    </button>
+                </div>
+                <h1 class="tasks-heading">Tasks</h1>
+                <ul id="todoContainer"></ul>
+                <div>
+                    <button class="btn-styles" id="backBtn"><span class="btn-styles-span">Back</span></button>
+                </div>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    </div>
+
+
+
+
+
+
+<script src="todo.js"></script>
+</body>
+
+</html>

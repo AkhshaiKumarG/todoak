@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Background image for small devies */
+.bgroundSm {
+    background-image: url('https://i.pinimg.com/originals/33/8a/b6/338ab6fa7715bc0f07fa781cb93b23ed.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Background for medium devices */
+.bgroundMd {
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/773/505/desktop-wallpaper-inspirational-motivational-ultra-backgrounds-for-widescreen-ultrawide-laptop-multi-display-dual-monitor-tablet-smartphone-motivation-mobile.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Button div to the center */
+.btns-center {
+    text-align: center;
+}
+
+/* Home page button styles */
+/* .btn-styles {
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+    color: blue;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    background-color: white;
+    border-color: white;
+    border-width: 3px;
+    cursor: pointer;
+} */
+
+
+.btn-styles {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+   }
+   
+   .btn-styles .btn-styles-span {
+    display: inline-block;
+    padding: 9px 25px;
+    font-size: 17px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+   }
+   
+   .btn-styles .btn-styles-span:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+   }
+
+
+
+
+
+
+/* Home page button hover */
+.btn-styles:hover {
+    background-color: #dc5d19;
+    box-shadow: orange 5px 5px 29px 0px;
+    /* //x-axis y-axis blur spread */
+}
+
+.btn-styles:active {
+    transform: translateY(10px);
+    /* translateY means moves in Y-axis direction */
+}
+
+/* Button div center */
+.btns-center-md {
+    text-align: center;
+}
+
+/* Button style for medium devices */
+.btn-styles-md {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+    margin-bottom: 150px;
+   }
+   
+   .btn-styles-md .btn-styles-span-md {
+    display: inline-block;
+    padding: 9px 25px;
+    font-size: 17px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+    
+   }
+   
+   .btn-styles-md .btn-styles-span-md:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+   }
+
+/* Background image for large devices */
+.bgroundLg {
+    background-image: url('https://wallpapers.com/images/hd/4k-ultra-hd-motivational-focus-bs4nnk5bt18sgwi4.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Button center div for large deivces */
+.btns-center-lg {
+    text-align: center;
+}
+
+/* Button style for large devices */
+.btn-styles-lg {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+    margin-bottom: 150px;
+   }
+   
+   .btn-styles-lg .btn-styles-span-lg {
+    display: inline-block;
+    padding: 9px 25px;
+    font-size: 17px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color;
+    height: 100%;
+    width: 100%;
+   }
+   
+   .btn-styles-lg .btn-styles-span-lg:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+   }
+
+
+
+
+
+/* Todo page background */
+.bground {
+    background-image: url('https://w0.peakpx.com/wallpaper/840/965/HD-wallpaper-motivational-quote-design-logo-motivated-phone-quotes-simple.jpg');
+    /* background-color: black; */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 20px;
+}
+
+/* Your todo's list heading */
+.heading {
+    /* color: ; */
+    font-size: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: Comic Sans MS;
+    color: rgb(7, 47, 248);
+}
+
+/* Add your new todo text area style */
+.text-area {
+    /* outline: none; */
+    color: white;
+    width: 95%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    border-color: #f0e807;
+    background-color: transparent;
+}
+
+/* 'Tasks' heading in todo page */
+.tasks-heading {
+    font-size: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+/* 'ADD' and 'SAVE' button styles starts here */
+.newBtn {
+    /* padding: 0px 10px; */
+    background-color: #000;
+    border: none;
+    font-size: 18px;
+    height: 30px;
+    width: 80px;
+    position: relative;
+    /* overflow: hidden; */
+    transition: 500ms;
+}
+
+.newBtn span {
+    color: gray;
+    position: relative;
+    transition: 500ms;
+    transition-delay: 500ms;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.newBtn:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transition: 500ms;
+    transition-delay: 500ms;
+    background-color: red;
+    box-shadow: 0 0 10px red,
+        0 0 30px red,
+        0 0 50px red;
+}
+
+.newBtn div {
+    transition: 500ms;
+    position: absolute;
+    background-color: red;
+    box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+.newBtn .top {
+    width: 15px;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+
+.newBtn .bottom {
+    width: 15px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+}
+
+.newBtn .left {
+    width: 2px;
+    height: 15px;
+    top: 0;
+    left: 0;
+}
+
+.newBtn .right {
+    width: 2px;
+    height: 15px;
+    bottom: 0;
+    right: 0;
+}
+
+.newBtn:hover {
+    color: #000;
+}
+
+.newBtn:hover span {
+    color: #000;
+}
+
+.newBtn:hover:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.newBtn:hover .top,
+.newBtn:hover .bottom {
+    width: 100%;
+}
+
+.newBtn:hover .left,
+.newBtn:hover .right {
+    height: 100%;
+}
+
+/* ADD and SAVE button style ends here */
+
+
+/* checkbox style */
+.checkbox-style {
+    width: 20px;
+    height: 20px;
+    margin-top: 23px;
+    margin-right: 10px;
+}
+
+/* task label style */
+.label-style {
+    color: orange;
+    font-size: 17px;
+    width: 100%;
+}
+
+/* space between two todo's */
+.lists {
+    border-style: solid;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* space between delete word and complee word */
+.trash-align {
+    text-align: center;
+    padding-right: 20px;
+}
+
+/* .trash-style {
+    padding-top: 4px;
+    padding-left: 0px;
+} */
+
+/* 'DELETE' word style */
+.deleteStyles {
+    color: red;
+}
+
+/* .checked {
+    text-decoration: line-through;
+} */
+
+/* bakcground color for completed todo */
+.checked-color {
+    background-color: green;
+}
+
+/* 'COMPLETED' word style */
+.completedStyles {
+    color: green;
+}
+
+/* 'COMPLETED' word color after checked */
+.completed-white {
+    color: white;
+}
+
+/* 'COMPLETED' word transition style */
+.completed-word-transition {
+    color: white;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+/* todo's label color after checked */
+.black {
+    color: black;
+}
+
+/* background color of todo on hovering 'COMPLETED' word */
+.mousing2 {
+    background-color: green;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+/* background color on todo on hovering 'DELETED' word */
+.mousing1 {
+    background-color: red;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+/* 'DELETE' word transition style */
+.delete-word-transition1 {
+    color: white;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+/* todo's label color on hovering 'DELETE' word */
+.black-label {
+    color: black;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+/* .sizes {
+    height: 100vh;
+} */
+
+
+
+
+
+
+
+#bgroundContainer {
+    position: relative;
+    /* Ensure positioning context for absolute positioning */
+    z-index: 1;
+    /* Set z-index to make it appear as second layer */
+}
+
+
+#confettiAnimationContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    z-index: 2;
+    /* Adjust the z-index value as needed */
+}
